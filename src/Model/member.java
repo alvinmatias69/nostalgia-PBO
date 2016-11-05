@@ -18,6 +18,7 @@ public class member extends Akun{
     public member(String nama, String username, String password, int number) {
         super();
     }
+    
     public sewaMobil(Penyewaan penyewaan){
         
     }
