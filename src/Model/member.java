@@ -12,15 +12,15 @@ import java.util.ArrayList;
  * @author Mirah
  */
 public class member extends Akun{
-    String noMember;
-    ArrayList<Penyewaan> penyewaan;
+    private String noMember;
+    private ArrayList<Penyewaan> penyewaan;
 
     public member(String nama, String username, String password, int number) {
-        super();
+        super(nama, username, password);
     }
     
-    public sewaMobil(Penyewaan penyewaan){
-        
+    public void sewaMobil(Penyewaan penyewaan){
+        this.penyewaan.add(penyewaan);
     }
 
     public String getNoMember() {

@@ -13,7 +13,7 @@ public class Sewa12Jam implements StrategiPenyewaan{
 
     @Override
     public double kalkulasiBiaya(long biaya) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return biaya * 0.9;
     }
     
 }
