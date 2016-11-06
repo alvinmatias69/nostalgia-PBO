@@ -5,6 +5,10 @@
  */
 package View;
 
+import Controller.ControllerMenuUtama;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author RachmiAzanisa
@@ -110,7 +114,15 @@ public class MenuUtama extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnPenyewaanActionPerformed
 
-
+    public JButton getBtnPenyewaan(){
+        return BtnPenyewaan;
+    }
+    public JButton getBtnLihatRiwayat(){
+        return BtnLihatRiwayat;
+    }
+    public JButton getBtnLogout(){
+        return BtnLogout;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnLihatRiwayat;
     private javax.swing.JButton BtnLogout;
@@ -119,4 +131,10 @@ public class MenuUtama extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    public void addListener(ActionListener e) {
+        BtnPenyewaan.addActionListener(e);
+        BtnLihatRiwayat.addActionListener(e);
+        BtnLogout.addActionListener(e);
+    }
 }
