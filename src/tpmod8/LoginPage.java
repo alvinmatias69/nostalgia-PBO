@@ -5,6 +5,9 @@
  */
 package tpmod8;
 
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Mirah
@@ -17,6 +20,23 @@ public class LoginPage extends javax.swing.JPanel {
     public LoginPage() {
         initComponents();
     }
+
+    public void setPassWord(JPasswordField PassWord) {
+        this.PassWord = PassWord;
+    }
+
+    public void setUserName(JTextField UserName) {
+        this.UserName = UserName;
+    }
+
+    public JPasswordField getPassWord() {
+        return PassWord;
+    }
+
+    public JTextField getUserName() {
+        return UserName;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
