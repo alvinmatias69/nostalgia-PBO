@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author Mirah
  */
-public class member extends Akun{
+public class Member extends Akun{
     private String noMember;
     private ArrayList<Penyewaan> penyewaan;
 
-    public member(String nama, String username, String password, int number) {
+    public Member(String nama, String username, String password, int number) {
         super(nama, username, password);
     }
     
