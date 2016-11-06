@@ -5,6 +5,11 @@
  */
 package View;
 
+import Controller.Login;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 /**
  *
  * @author Mirah
@@ -30,10 +35,10 @@ public class LoginPage extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        username = new javax.swing.JTextField();
-        bottonKembali = new javax.swing.JButton();
+        tfusername = new javax.swing.JTextField();
+        bottonLogin = new javax.swing.JButton();
         bottonRegistrasi = new javax.swing.JButton();
-        password = new javax.swing.JPasswordField();
+        tfpassword = new javax.swing.JPasswordField();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("LOGIN MENU");
@@ -44,15 +49,20 @@ public class LoginPage extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel3.setText("Password");
 
-        bottonKembali.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        bottonKembali.setText("Kembali");
+        bottonLogin.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        bottonLogin.setText("Login");
+        bottonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bottonLoginActionPerformed(evt);
+            }
+        });
 
         bottonRegistrasi.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         bottonRegistrasi.setText("Registrasi");
 
-        password.addActionListener(new java.awt.event.ActionListener() {
+        tfpassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordActionPerformed(evt);
+                tfpasswordActionPerformed(evt);
             }
         });
 
@@ -71,15 +81,15 @@ public class LoginPage extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(password))
+                                .addComponent(tfpassword))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(tfusername, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(70, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(bottonKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bottonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bottonRegistrasi, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
@@ -92,31 +102,74 @@ public class LoginPage extends javax.swing.JPanel {
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfusername, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bottonRegistrasi, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bottonKembali, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bottonLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+    private void tfpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfpasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordActionPerformed
+    }//GEN-LAST:event_tfpasswordActionPerformed
 
+    private void bottonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bottonLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bottonLoginActionPerformed
+
+    public String getUserName(){
+      return tfusername.getText();
+    }
+    
+    public char[] getPassword(){
+        return tfpassword.getPassword();
+    }
+    
+    public JTextField getTfUserName(){
+        return tfusername;
+    }
+    
+    public JTextField getTfPassword(){
+        return tfpassword;
+    }
+    public void setUsername(String username){
+        tfusername.setText(username);
+    }
+    public void setPassword(String password){
+        tfpassword.setText(password);
+    }
+    
+    public JButton getBottonLogin(){
+        return bottonLogin;
+    }
+    
+    public JButton getBottonRegistrasi(){
+        return bottonRegistrasi;
+    }
+    
+    public void addListener(ActionListener ae){
+        bottonLogin.addActionListener(ae);
+        bottonRegistrasi.addActionListener(ae);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bottonKembali;
+    private javax.swing.JButton bottonLogin;
     private javax.swing.JButton bottonRegistrasi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField password;
-    private javax.swing.JTextField username;
+    private javax.swing.JPasswordField tfpassword;
+    private javax.swing.JTextField tfusername;
     // End of variables declaration//GEN-END:variables
+
+    public void setTitle(String login_Sistem_Penyewaan) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

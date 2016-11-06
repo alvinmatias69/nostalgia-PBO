@@ -5,6 +5,10 @@
  */
 package View;
 
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
 /**
  *
  * @author Mirah
@@ -29,13 +33,13 @@ public class Registrasi extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        nama = new javax.swing.JTextField();
+        tfnama = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        usernameregistrasi = new javax.swing.JTextField();
+        tfusername = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        passwordregistrasi = new javax.swing.JPasswordField();
+        tfpassword = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
-        ulangipasswordregistrasi = new javax.swing.JPasswordField();
+        tfulangipassword = new javax.swing.JPasswordField();
         bottonkembaliregistrasi = new javax.swing.JButton();
         bottonregistrasiregistrasi = new javax.swing.JButton();
 
@@ -84,10 +88,10 @@ public class Registrasi extends javax.swing.JPanel {
                                 .addComponent(jLabel3)))
                         .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(usernameregistrasi)
-                            .addComponent(nama)
-                            .addComponent(passwordregistrasi)
-                            .addComponent(ulangipasswordregistrasi, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))))
+                            .addComponent(tfusername)
+                            .addComponent(tfnama)
+                            .addComponent(tfpassword)
+                            .addComponent(tfulangipassword, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -101,19 +105,19 @@ public class Registrasi extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(nama, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tfnama, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(usernameregistrasi, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfusername, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(passwordregistrasi, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
                         .addGap(23, 23, 23)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(ulangipasswordregistrasi, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfulangipassword, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bottonkembaliregistrasi)
@@ -122,7 +126,52 @@ public class Registrasi extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-
+    public String getNama(){
+        return tfnama.getText();
+    }
+    public String getUsername(){
+        return tfusername.getText();
+    }
+    public char[] getPassword(){
+        return tfpassword.getPassword();
+    }
+    public char[] getUlangiPassword(){
+        return tfulangipassword.getPassword();
+    }
+    public JTextField getTfNama(){
+        return tfnama;
+    }
+    public JTextField getTfUsername(){
+        return tfusername;
+    }
+    public JPasswordField getTfPassword(){
+        return tfpassword;
+    }
+    public JPasswordField getTfUlangiPassword(){
+        return tfulangipassword;
+    }
+    public void setNama(String nama){
+        tfnama.setText(nama);
+    }
+    public void setUsername(String username){
+        tfusername.setText(username);
+    }
+    public void setPassword(String password){
+        tfpassword.setText(password);
+    }
+    public void setUlangiPassword(String ulangipassword){
+        tfulangipassword.setText(ulangipassword);
+    }
+    public JButton getBtnKembaliRegistrasi(){
+        return bottonkembaliregistrasi;
+    }
+    public JButton getBtnRegistrasiRegistrasi(){
+        return bottonregistrasiregistrasi;
+    }
+    public void addListener(ActionListener ae){
+        bottonkembaliregistrasi.addActionListener(ae);
+        bottonregistrasiregistrasi.addActionListener(ae);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bottonkembaliregistrasi;
     private javax.swing.JButton bottonregistrasiregistrasi;
@@ -131,9 +180,9 @@ public class Registrasi extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField nama;
-    private javax.swing.JPasswordField passwordregistrasi;
-    private javax.swing.JPasswordField ulangipasswordregistrasi;
-    private javax.swing.JTextField usernameregistrasi;
+    private javax.swing.JTextField tfnama;
+    private javax.swing.JPasswordField tfpassword;
+    private javax.swing.JPasswordField tfulangipassword;
+    private javax.swing.JTextField tfusername;
     // End of variables declaration//GEN-END:variables
 }

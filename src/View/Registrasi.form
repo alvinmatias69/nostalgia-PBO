@@ -40,10 +40,10 @@
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="usernameregistrasi" max="32767" attributes="0"/>
-                          <Component id="nama" max="32767" attributes="0"/>
-                          <Component id="passwordregistrasi" max="32767" attributes="0"/>
-                          <Component id="ulangipasswordregistrasi" alignment="0" pref="187" max="32767" attributes="0"/>
+                          <Component id="tfusername" max="32767" attributes="0"/>
+                          <Component id="tfnama" max="32767" attributes="0"/>
+                          <Component id="tfpassword" max="32767" attributes="0"/>
+                          <Component id="tfulangipassword" alignment="0" pref="187" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -63,15 +63,15 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="nama" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="tfnama" min="-2" pref="31" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="usernameregistrasi" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="tfusername" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="passwordregistrasi" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="tfpassword" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
@@ -79,7 +79,7 @@
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  <Component id="ulangipasswordregistrasi" min="-2" pref="28" max="-2" attributes="0"/>
+                  <Component id="tfulangipassword" min="-2" pref="28" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="36" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -108,7 +108,7 @@
         <Property name="text" type="java.lang.String" value="Nama"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="nama">
+    <Component class="javax.swing.JTextField" name="tfnama">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -118,7 +118,7 @@
         <Property name="text" type="java.lang.String" value="Username"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="usernameregistrasi">
+    <Component class="javax.swing.JTextField" name="tfusername">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -128,7 +128,7 @@
         <Property name="text" type="java.lang.String" value="Password"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="passwordregistrasi">
+    <Component class="javax.swing.JPasswordField" name="tfpassword">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -138,7 +138,7 @@
         <Property name="text" type="java.lang.String" value="Ulangi Password"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="ulangipasswordregistrasi">
+    <Component class="javax.swing.JPasswordField" name="tfulangipassword">
     </Component>
     <Component class="javax.swing.JButton" name="bottonkembaliregistrasi">
       <Properties>
