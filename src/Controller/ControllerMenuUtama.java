@@ -5,10 +5,16 @@
  */
 package Controller;
 
+import Model.Akun;
+
 /**
  *
  * @author Dian Dwi Arini
  */
 public class ControllerMenuUtama {
+
+    ControllerMenuUtama(Akun akun) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

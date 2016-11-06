@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.Akun;
 import View.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,13 +28,19 @@ public class Login implements ActionListener, FocusListener {
         this.view.getTfPassword().addFocusListener(this);
     }
 
+    Login(Akun akun) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source= e.getSource();
         if(source.equals(view.getBottonRegistrasi())){
             new Regitrasi();
         }else{
-            if(){
+            String username = view.getUserName();
+            String password = view.getPassword();
+            if(akun(view.getUserName(username), view.getPassWord(password)){
                 
             }else{
                 JOptionPane.showMessageDialog(null, "Username atau Password Salah, silahkan coba lagi");
